@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp-app
+  name: my-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: myapp-app
+      app: my-app
   template:
     metadata:
       labels:
-        app: myapp-app
+        app: my-app
     spec:
       containers:
-        - name: myapp-app
-          image: ghcr.io/LarsWoutersUCLL/myapp-app:PROD
+        - name: my-app
+          image: ghcr.io/larswoutersucll/my-app:0e17977af32d26c8c2aab822475f969cac81eefc
           ports:
             - containerPort: 5000
