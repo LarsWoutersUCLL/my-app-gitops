@@ -1,5 +1,5 @@
 apiVersion: argoproj.io/v1alpha1
-kind: Rolloutnt
+kind: Rollout
 metadata:
   name: my-app
 spec:
@@ -20,6 +20,6 @@ spec:
             - containerPort: 5000
   strategy:
     blueGreen:
-      activeService: my-app
+      activeService: my-app-active
       previewService: my-app-preview
       autoPromotionEnabled: true
