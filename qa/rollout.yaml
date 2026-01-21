@@ -17,3 +17,8 @@ spec:
           image: ghcr.io/larswoutersucll/my-app:ea9f561639e43c8dc96b08413ed66053c62c31f1
           ports:
             - containerPort: 5000
+  strategy:
+    blueGreen:
+      activeService: my-app
+      previewService: my-app-preview
+      autoPromotionEnabled: true
